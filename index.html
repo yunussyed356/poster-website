@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberShield - Cyber Security Awareness</title>
+  <style>
+    :root {
+      --bg: #0a0f1c;
+      --card-bg: #111827;
+      --accent: #3b82f6;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--card-bg);
+      padding: 16px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    nav {
+      margin-top: 8px;
+    }
+
+    nav a {
+      color: var(--text);
+      margin: 0 12px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+      text-align: center;
+
+      /* equal height */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 280px;
+    }
+
+    .card img {
+      max-width: 300%;
+      height: 170px;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--card-bg);
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media(max-width:300px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Popup box */
+    .popup-box {
+      background: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 3000%;
+      text-align: center;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Close button */
+    .close-btn {
+      background: rgb(54, 20, 204);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-top: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <h2>SMT.MAHERBANU COLLEGE OF SCIENCE & COMMERCE,AKOLA</h2>
+      <H3>🥳ANKUR 2025👨🏻‍💻</H3>
+      <H4>POSTER & MODEL PRESENTATION</H4>
+      <H4>BY :- SYED YUNUS & SYED AAFAN</H4>
+      <H4>FROM BCA 2ND YEAR</H4>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+  <script>
+    // Show popup when website loads
+    window.onload = function () {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    // Function to close popup
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+  <header>
+    <h1>CyberShield</h1>
+    <nav>
+      <a href="#intro">Introduction</a>
+      <a href="#attacks">Types of Attacks</a>
+      <a href="#protection">How to Protect</a>
+      <a href="#conclusion">Conclusion</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>Introduction</h2>
+    <p><strong>What is Cyber Security?</strong> Cyber security is the practice of protecting computers, networks, and
+      data from digital threats like hacking, malware, and unauthorized access. It ensures the safety of sensitive
+      information and keeps systems reliable.</p>
+    <p><strong>Importance of Cyber Security:</strong> In today’s world, almost everything is connected to the internet —
+      banking, shopping, education, and healthcare. Without proper security, hackers can steal money, personal data, and
+      cause damage. Cyber security is important to protect privacy, secure businesses, and maintain trust in the digital
+      world.</p>
+  </section>
+
+  <section id="attacks">
+    <h2>Types of Attacks</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Phishing Attacks</h3>
+        <a href="#protect-phishing"><img src="download.png" alt="Phishing"></a>
+      </div>
+      <div class="card">
+        <h3>Vishing Attacks</h3>
+        <a href="#protect-vishing"><img src="vishing.jpg" alt="Vishing"></a>
+      </div>
+      <div class="card">
+        <h3>Viruses Attacks</h3>
+        <a href="#protect-viruses"><img src="virsus.jpg" alt="Viruses"></a>
+      </div>
+      <div class="card">
+        <h3>Password Attacks</h3>
+        <a href="#protect-password"><img src="passward2.jpg" alt="Password"></a>
+      </div>
+      <div class="card">
+        <h3>Brute Force Attacks</h3>
+        <a href="#protect-brute"><img src="bruteforce1.png" alt="Brute Force"></a>
+      </div>
+      <div class="card">
+        <h3>Spyware</h3>
+        <a href="#protect-spyware"><img src="spywarejpg.jpg" alt="Spyware"></a>
+      </div>
+      <div class="card">
+        <h3>Keylogger Attacks</h3>
+        <a href="#protect-keylogger"><img src="keylogger.jpg" Keylogger"></a>
+      </div>
+      <div class="card">
+        <h3>Man-in-the-Middle</h3>
+        <a href="#protect-mitm"><img src="men in the middle.png" alt="MITM"></a>
+      </div>
+      <div class="card">
+        <h3>SQL Injection</h3>
+        <a href="#protect-sql"><img src="sqlinjection.jpg" alt="SQL Injection"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="protection">
+    <h2>How to Protect</h2>
+    <div class="grid">
+      <div class="card" id="protect-phishing">
+        <h3>Phishing</h3>
+        <p><ul><li>Do not click on suspicious links or share sensitive info via email. </li>
+          <li>Don’t share passwords, OTPs, or personal info over email/phone.</li>
+        <li>se two-factor authentication (2FA/MFA).</li>
+
+        </ul>
+        </p>
+      </div>
+      <div class="card" id="protect-vishing">
+        <h3>Vishing</h3>
+        <p><ul>
+        <li>Do not share personal info on unknown calls; verify caller identity.</li>
+        <li>Always call back official numbers to verify claims.</li>
+        <li>Be alert to urgent-sounding calls — hackers often create panic.</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card" id="protect-viruses">
+        <h3>Viruses</h3>
+        <p><ul>
+          <li>nstall antivirus software and keep your system updated.</li>
+        <li>Avoid unknown email attachments, pirated software, or USB drives.</li>
+        <li>liKeep system and applications up to date.</li>
+      </ul> 
+      </p>
+      </div>
+      <div class="card" id="protect-password">
+        <h3>Password Attacks</h3>
+        <p><ul>
+          <li>Use strong, unique passwords and enable two-factor authentication.</li>
+        <li>Don’t reuse passwords across multiple sites.</li>
+        <li>Enable multi-factor authentication.</li>
+      </ul>
+     </p>
+      </div>
+      <div class="card" id="protect-brute">
+        <h3>Brute Force</h3>
+        <p>
+          <ul>
+          <li>Set long, complex passwords and limit login attempts.</li>
+          <li>Use CAPTCHA for login forms.</li>
+          <li>Enable MFA to block access even if password is guessed.</li>
+        </ul></p>
+        
+      </div>
+      <div class="card" id="protect-spyware">
+        <h3>Spyware</h3>
+        <p>
+          <ul>
+            <li>Avoid downloading from untrusted sites and use anti-spyware tools.</li>
+            <li> Use anti-spyware tools to detect and remove spyware.</li>
+            <li>Monitor your device's behavior for unusual activity.</li>
+          </ul></p>
+      </div>
+      <div class="card" id="protect-keylogger">
+        <h3>Keylogger</h3>
+        <p><ul><li>Keep software updated and use on-screen keyboards for sensitive info.</li>
+        <li>Use encrypted connections (HTTPS) and consider a VPN for added security.</li>
+        <li>Install and update antivirus software to detect and remove malware.</li>
+        </ul></p>
+      </div>
+      <div class="card" id="protect-mitm">
+        <h3>Man-in-the-Middle</h3>
+        <p><li>Always use secure (HTTPS) websites and avoid public Wi-Fi.</li>
+          <li>Avoid public/unsecured Wi-Fi; use a VPN if necessary.</li>
+          <li>Implement certificate pinning and strong encryption for communications.</li>
+        </p>
+      </div>
+      <div class="card" id="protect-sql">
+        <h3>SQL Injection</h3>
+        <p><ul>
+          <li>Developers should use secure coding practices and input validation.</li>
+        <li>Validate and sanitize all user inputs.</li>
+        <li>Apply least-privileged database accounts.</li>
+      </ul></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>Cyber security is not just a technical subject; it is a necessity for every individual and organization. Attacks
+      like phishing, spyware, and SQL injection are becoming more advanced every day, making it important to stay alert.
+      By learning about these threats and taking preventive measures, we can reduce risks and protect our data. Simple
+      actions like updating passwords, avoiding suspicious links, and using secure networks go a long way in safety.
+      Governments and companies are also investing heavily in cyber defense, but personal awareness is the first line of
+      defense. If we all stay cautious, the digital world can be safer for everyone.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 CyberShield | Built for Awareness</p>
+  </footer>
+</body>
+
+</html>
